@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\homecontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/home',[homecontroller::class,'redirect']);
 
 Route::middleware([
     'auth:sanctum',
@@ -25,4 +25,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/', function () {
+        return view('main-website.index');
+    });
+    Route::get('/admin',function (){
+        return view('admin.dashboard');
+    });
 });
