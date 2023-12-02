@@ -8,6 +8,9 @@ use App\Models\User;
 
 class homecontroller extends Controller
 {
+    public function index(){
+        return view ('index');
+    }
     public function redirect(){
         if(Auth::id()){
             if(Auth::user()->usertype == 0){

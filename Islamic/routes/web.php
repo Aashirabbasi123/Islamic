@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/home',[homecontroller::class,'redirect']);
+// Route::get('/home',[homecontroller::class,'index']);
 
 Route::middleware([
     'auth:sanctum',
