@@ -23,6 +23,9 @@
             ullam nihil eveniet neque hic libero qui quod nemo veniam est assumenda impedit amet? Illum?</h3>
     </main>
     <footer>
+    <x-app-layout>
+
+</x-app-layout>
         <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Libraries -->

@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('main-website.components.hader_nav')
+@include('main-website.components.hader')
 @include('main-website.components.slider')
 @include('main-website.components.feature')
 @include('main-website.components.welcom')

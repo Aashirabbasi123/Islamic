@@ -26,6 +26,12 @@ class myseeder extends Seeder
             'email'=> 'user@gmail.com',
             'password'=> hash::make('123'),
             'usertype'=> '0',
+        ],
+        [
+            'name'=> 'courses',
+            'email'=> 'courses@gmail.com',
+            'password'=> hash::make('123'),
+            'usertype'=> '2',
         ]
        ]);
     }

@@ -8,16 +8,19 @@ use App\Models\User;
 
 class homecontroller extends Controller
 {
-    public function index(){
-        return view ('index');
+    public function home(){
+        return view ('main-website.index');
     }
     public function redirect(){
         if(Auth::id()){
             if(Auth::user()->usertype == 0){
-                return view('main-website.index');
+                return view('user.user');
             }
             elseif(Auth::user()->usertype == 1){
                 return view('admin.dashboard');
+            }
+            elseif(Auth::user()->usertype == 2){
+                return view('courses.courses');
             }
         }
     }

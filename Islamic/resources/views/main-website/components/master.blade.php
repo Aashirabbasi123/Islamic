@@ -23,9 +23,10 @@
 </head>
 
 <body>
+<div class="page-wrapper">
 
 @yield('content')
-
+</div>
 
 
 <script src="assets/js/jquery.js"></script>

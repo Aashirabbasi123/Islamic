@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
+
+Route::get('/',[homecontroller::class,'home']);
 Route::get('/home',[homecontroller::class,'redirect']);
-// Route::get('/home',[homecontroller::class,'index']);
 
 Route::middleware([
     'auth:sanctum',
@@ -26,10 +28,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/', function () {
-        return view('main-website.index');
-    });
-    Route::get('/admin',function (){
-        return view('admin.dashboard');
-    });
+
 });
